@@ -792,7 +792,7 @@ class AdbWrapper
         // GenericProfiler
         prop = prop.toString().split("\n");
         prop.map(( ppt)=>{
-            let match = PROP_RE.exec(ppt);
+            let match = PROP_RE.exec(ppt.trim());
 
             if(match != null)
                 profile.addProperty(match.groups.name, match.groups.value);
